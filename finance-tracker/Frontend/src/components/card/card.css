@@ -1,0 +1,28 @@
+.card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ccc;
+  box-shadow: 1px 1px 1px 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+
+.card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+}
+
+.card img{
+    width: 20%;
+
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+}

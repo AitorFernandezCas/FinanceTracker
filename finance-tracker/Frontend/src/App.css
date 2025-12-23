@@ -1,0 +1,11 @@
+.container-AssetSelection{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  padding: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
