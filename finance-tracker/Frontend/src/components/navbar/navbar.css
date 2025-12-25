@@ -1,0 +1,10 @@
+.navbar{
+    background-color: #333;
+    width: 5%;
+    transition: 1s;
+
+}
+
+.navbar:hover{
+    width: 20%;
+}

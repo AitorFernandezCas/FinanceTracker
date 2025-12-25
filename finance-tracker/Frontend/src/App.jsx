@@ -1,4 +1,6 @@
 import Card from './components/card/card.jsx'
+import Navbar from './components/navbar/navbar.jsx'
+
 import hogarIcon from './assets/hogar.svg';
 import './App.css'
 import { Routes, Route } from "react-router-dom";
@@ -12,6 +14,7 @@ function App() {
           path = '/'
           element = {
     <div className="App">
+      <><Navbar /></>
       <div className='container-AssetSelection'>
      <Card
      icon = {hogarIcon}
