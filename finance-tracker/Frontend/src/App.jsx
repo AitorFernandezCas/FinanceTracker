@@ -14,8 +14,31 @@ function App() {
           path = '/'
           element = {
     <div className="App">
-      <><Navbar /></>
-      <div className='container-AssetSelection'>
+      <Navbar logo = {hogarIcon} />
+      <div className = "content">
+      <div className = 'container-Income'>
+        <Card
+          icon = {hogarIcon}
+          titulo = "Activos"
+               to="/liquidez"
+       items={{
+              Name: "Alice",
+              Age: 30,
+              Country: "Spain"
+              }}
+        />
+         <Card
+          icon = {hogarIcon}
+          titulo = "Pasivos"
+               to="/liquidez"
+       items={{
+              Name: "Alice",
+              Age: 30,
+              Country: "Spain"
+              }}
+        />
+      </div>
+      <div className='container-WealthBreakdown'>
      <Card
      icon = {hogarIcon}
      titulo = "Liquidez"
@@ -56,6 +79,49 @@ function App() {
               Country: "Spain"
               }}
       />
+    </div>
+      <div className='container-WealthGraph'>
+     <Card
+     icon = {hogarIcon}
+     titulo = "Liquidez"
+     to="/liquidez"
+       items={{
+              Name: "Alice",
+              Age: 30,
+              Country: "Spain"
+              }}
+      />
+           <Card
+     icon = {hogarIcon}
+     titulo = "Inversiones"
+     to="/liquidez"
+       items={{
+              Name: "Alice",
+              Age: 30,
+              Country: "Spain"
+              }}
+      />
+           <Card
+     icon = {hogarIcon}
+     titulo = "Deudas"
+     to="/liquidez"
+       items={{
+              Name: "Alice",
+              Age: 30,
+              Country: "Spain"
+              }}
+      />
+           <Card
+     icon = {hogarIcon}
+     titulo = "Inmobiliario"
+     to="/liquidez"
+       items={{
+              Name: "Alice",
+              Age: 30,
+              Country: "Spain"
+              }}
+      />
+    </div>
     </div>
     </div>
           }

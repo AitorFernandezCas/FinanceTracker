@@ -3,22 +3,73 @@ body{
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(226, 224, 224);
+}
+
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App{
   display: flex;
   flex-direction: row;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
 }
 
-.container-AssetSelection{
+.content{
+  display: grid;
+  height:100vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 1%;
+  grid-row-gap: 1%;
+  justify-content: normal;
+  align-items: normal;
+  
+}
+
+
+.container-Income{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-column-gap: 3%;
+  grid-row-gap: 3%;
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 1%;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+
+
+
+
+.container-WealthBreakdown{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(2,1fr);
-  grid-column-gap: 5%;
-  grid-row-gap: 5%;
-  padding: 10%;
-  justify-content: center;
-  align-items: center;
+  grid-column-gap: 3%;
+  grid-row-gap: 3%;
+  grid-area: 1 / 2 / 3 / 3;
+  padding: 1%;
+  background-color: gray;
+  border-radius: 10px;
 }
 
+.container-WealthGraph{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-column-gap: 3%;
+  grid-row-gap: 3%;
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 1%;
+  background-color: gray;
+  border-radius: 10px;
+}

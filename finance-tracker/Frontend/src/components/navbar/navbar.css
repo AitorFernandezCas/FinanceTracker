@@ -1,10 +1,19 @@
 .navbar{
     background-color: #333;
     width: 5%;
+    height: 100vh;
     transition: 1s;
-
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
 }
 
 .navbar:hover{
     width: 20%;
+}
+
+
+.navbar-logo{
+    width: 80%;
+    padding: 10%;
 }

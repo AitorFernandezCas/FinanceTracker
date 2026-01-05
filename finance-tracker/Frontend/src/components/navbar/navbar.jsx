@@ -5,7 +5,7 @@ function Navbar(props) {
   const navigate = useNavigate();
 
   return (<div className='navbar'>
-
+    <img src={props.logo} alt="Logo" className='navbar-logo' />
   </div>);
 }
 
