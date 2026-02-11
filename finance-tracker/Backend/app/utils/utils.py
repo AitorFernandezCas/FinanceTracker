@@ -1,19 +1,13 @@
 from sqlalchemy import text
-from sqlalchemy.exc import OperationalError
+from sqlalchemy.exc import SQLAlchemyError
 
-
-
-def check_db_connection(db):
-    """
-    Returns (True, "ok") if DB reachable, otherwise (False, error_message).
-    Call inside `with app.app_context():`.
-    """
+def check_database_health(db):
     try:
-        # open a short-lived connection and run a simple query
-        with db.engine.connect() as conn:
-            conn.execute(text("SELECT 1"))
-        return True, "ok"
-    except OperationalError as oe:
-        return False, f"OperationalError: {oe}"
-    except Exception as e:
-        return False, f"{type(e).__name__}: {e}"
+        with db.engine.connect() as connection:
+            connection.execute(text("SELECT 1"))
+        print("✅ Database connection: OK")
+        return True
+    except SQLAlchemyError as e:
+        print("❌ Database connection: FAILED")
+        print(e)
+        return False
