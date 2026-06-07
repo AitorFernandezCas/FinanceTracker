@@ -1,19 +1,27 @@
-.navbar{
-    background-color: #333;
-    width: 5%;
-    height: 100vh;
-    transition: 1s;
-    justify-content: center;
-    align-items: flex-start;
-    display: flex;
+.navbar {
+  background-color: #1E293B;
+  width: 60px;
+  min-width: 60px;       /* evita que flex lo comprima */
+  height: 100%;          /* hereda el 100dvh del padre .App */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  transition: width 0.3s ease;
+  overflow: hidden;
 }
 
-.navbar:hover{
-    width: 20%;
+.navbar:hover {
+  width: 200px;
 }
 
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: width 0.3s ease;
+}
 
-.navbar-logo{
-    width: 80%;
-    padding: 10%;
+.navbar:hover .navbar-logo {
+  width: 120px;
 }

@@ -1,0 +1,215 @@
+/* ── Layout raíz ────────────────────────────────────────────────────────────── */
+.inv-root {
+  display: flex;
+  height: 100vh;
+  background: var(--color-background-tertiary, #f5f4f0);
+  font-family: var(--font-sans, system-ui, sans-serif);
+  overflow: hidden;
+}
+
+/* ── Área de contenido principal ────────────────────────────────────────────── */
+.inv-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 28px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* ── Encabezado ─────────────────────────────────────────────────────────────── */
+.inv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inv-page-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-text-primary, #1a1a18);
+  margin: 0;
+}
+
+.inv-fecha {
+  font-size: 12px;
+  color: var(--color-text-secondary, #888780);
+}
+
+/* ── KPI cards ──────────────────────────────────────────────────────────────── */
+.inv-kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.inv-kpi-card {
+  background: var(--color-background-secondary, #f0ede6);
+  border-radius: var(--border-radius-md, 8px);
+  padding: 14px 16px;
+}
+
+.inv-kpi-label {
+  font-size: 11px;
+  color: var(--color-text-secondary, #888780);
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.inv-kpi-value {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary, #1a1a18);
+  margin: 0 0 3px;
+}
+
+.inv-kpi-badge {
+  font-size: 11px;
+  margin: 0;
+}
+
+.inv-kpi-badge.pos { color: #1D9E75; }
+.inv-kpi-badge.neg { color: #D85A30; }
+
+/* ── Grid de gráficos ───────────────────────────────────────────────────────── */
+.inv-charts-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 16px;
+}
+
+/* ── Card genérica ──────────────────────────────────────────────────────────── */
+.inv-card {
+  background: var(--color-background-primary, #ffffff);
+  border: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.12));
+  border-radius: var(--border-radius-lg, 12px);
+  padding: 16px 18px;
+}
+
+.inv-card-full {
+  width: 100%;
+}
+
+.inv-card-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary, #888780);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+}
+
+/* ── Leyenda del gráfico de líneas ──────────────────────────────────────────── */
+.inv-chart-legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.inv-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--color-text-secondary, #888780);
+}
+
+.inv-legend-line {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.inv-legend-line.solid  { background: #185FA5; }
+.inv-legend-line.dashed {
+  background: repeating-linear-gradient(
+    90deg, #5DCAA5 0px, #5DCAA5 4px, transparent 4px, transparent 7px
+  );
+}
+
+/* ── Tabla de dividendos ────────────────────────────────────────────────────── */
+.inv-dividendos {
+  display: flex;
+  flex-direction: column;
+}
+
+.inv-div-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.08));
+}
+
+.inv-div-row:last-child {
+  border-bottom: none;
+}
+
+.inv-div-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 36px;
+  line-height: 1.2;
+}
+
+.inv-div-day {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color-text-primary, #1a1a18);
+}
+
+.inv-div-month {
+  font-size: 10px;
+  color: var(--color-text-secondary, #888780);
+  text-transform: uppercase;
+}
+
+.inv-div-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.inv-div-ticker {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary, #1a1a18);
+}
+
+.inv-div-nombre {
+  font-size: 11px;
+  color: var(--color-text-secondary, #888780);
+}
+
+.inv-div-importe {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1D9E75;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .inv-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .inv-kpis-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .inv-main {
+    padding: 16px 14px 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  .inv-kpis-grid {
+    grid-template-columns: 1fr;
+  }
+}
